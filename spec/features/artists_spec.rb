@@ -14,13 +14,15 @@ describe "artists", type:  :feature do
     expect(page).to have_link("The Grid", href: song_path(@grid))
   end
 
-  it "lists all of the artist's songs" do
-    visit artist_path(@artist)
-    within("ul") do
-      expect(page).to have_content("The Grid")
-      expect(page).to have_content("Voyager")
-    end
-  end
+
+# Commented out with Matt
+  # it "lists all of the artist's songs" do
+  #   visit artist_path(@artist)
+  #   within("ul") do
+  #     expect(page).to have_content("The Grid")
+  #     expect(page).to have_content("Voyager")
+  #   end
+  # end
 
   it "lists the artists" do
     visit artists_path
